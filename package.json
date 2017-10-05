@@ -1,0 +1,38 @@
+{
+  "name": "password-magic",
+  "version": "0.1.0",
+  "author": "Andi Dittrich (https://andidittrich.de)",
+  "license": "MIT",
+  "homepage": "https://github.com/AndiDittrich/Node.password-magic",
+  "bugs": "https://github.com/AndiDittrich/Node.password-magic/issues",
+  "repository": "AndiDittrich/Node.password-magic",
+  "description": "Generate ultrastrong user passwords and auth tokens",
+  "keywords": [
+    "password",
+    "generator",
+    "token",
+    "user",
+    "security",
+    "random",
+    "numbers"
+  ],
+  "files": [
+    "lib",
+    "CHANGES.md",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "main": "password-magic.js",
+  "bin": {},
+  "preferGlobal": false,
+  "engines": {
+    "node": ">=7.6"
+  },
+  "scripts": {
+    "test": "eslint lib/*"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-aenondynamics": "^0.1.0"
+  }
+}
