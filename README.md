@@ -23,7 +23,9 @@ API
 
  * [numbers](#numbers) - Random Number Sequences of arbitrary length 
  * [pin](#pin) - Creates a 4 digit numerical code
- * [internet](#internet) - Strong passphrases especially used for web services/accounts
+ * [internet](#internet) - Strong passphrases especially used for web services/accounts/wifi
+ * [server](#server) - Ultrastrong passphrases especially used for servers
+ * [humanShort](#humanshort) - Remarkable passwords including greek+nato alphabet
 
 numbers
 ------------------------------
@@ -60,7 +62,7 @@ pin
 internet
 ------------------------------
 
-**Description:** Strong passphrases especially used for web services/accounts
+**Description:** Strong passphrases especially used for web services/accounts or wifi
 
 **Syntax:** `sequence:string = internet([length:int = 22], [shuffle:boolean = false])`
 
@@ -79,6 +81,42 @@ const pw1 = _pwMagic.internet();
 
 const pw2 = _pwMagic.internet(50, true);
 // 62p6u4dS934HssJ9*8BMa!(NN}q}384Udoc2F!)8%§5!D7psYL
+```
+
+server
+------------------------------
+
+**Description:** Ultrastrong passphrases especially used for servers
+
+**Syntax:** `sequence:string = server([length:int = 20])`
+
+**Output:** `v~8)yyk§HMKU§HBg&%#w`
+
+**Arguments:**
+
+ * length:int - length of the generated sequence
+
+**Example:**
+
+```js
+const pw1 = _pwMagic.server(25);
+// v~8)yyk§HMKU§HBg&%#wyDS9F
+```
+
+humanShort
+------------------------------
+
+**Description:** Remarkable passphrases especially used for web services/accounts **with** multifactor auth
+
+**Syntax:** `sequence:string = humanShort()`
+
+**Output:** `foxtrot5SIERRA,four]03pm`
+
+**Example:**
+
+```js
+const pw1 = _pwMagic.humanShort();
+// foxtrot5SIERRA,four]03pm
 ```
 
 Any Questions ? Report a Bug ? Enhancements ?
