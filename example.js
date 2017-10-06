@@ -9,11 +9,17 @@ for (let i=0;i<10;i++){
 // 10 numbers
 console.log('Random Numbers')
 for (let i=0;i<10;i++){
-    console.log('Pin', _pwMagic.numbers(20));
+    console.log('Numbers', _pwMagic.numbers(20));
 }
 
-// 10 numbers
+// 10 passwords
 console.log('Random Human Passwords (Short)')
 for (let i=0;i<10;i++){
-    console.log('Pin', _pwMagic.humanShort());
+    console.log('Human', _pwMagic.humanShort());
+}
+
+// 10 passwords
+console.log('Random Internet Passwords (custom length, shuffled)')
+for (let i=0;i<10;i++){
+    console.log('Internet', _pwMagic.internet(50, true));
 }

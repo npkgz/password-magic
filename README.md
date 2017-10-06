@@ -15,12 +15,15 @@ Features
 * Generate Random User Passwords
 * Random Number Sequences of arbitrary length 
 * Random Pin Numbers (4 Digits)
-* Remarkable Human Passwords
+* Remarkable Human Passwords (nato+greek alphabet)
+* Human passwords/tokens only uses easy readable chars (`l` and `i` are avoided)
 
 API
 ------------------------------
 
  * [numbers](#numbers) - Random Number Sequences of arbitrary length 
+ * [pin](#pin) - Creates a 4 digit numerical code
+ * [internet](#internet) - Strong passphrases especially used for web services/accounts
 
 numbers
 ------------------------------
@@ -28,6 +31,8 @@ numbers
 **Description:** Random Number Sequences of arbitrary length 
 
 **Syntax:** `sequence:string = numbers([length:int = 8])`
+
+**Output:** `9071248216498`
 
 **Arguments:**
 
@@ -43,6 +48,38 @@ for (let i=0;i<10;i++){
 }
 ```
 
+pin
+------------------------------
+
+**Description:** Creates a 4 digit numerical code
+
+**Syntax:** `sequence:string = pin()`
+
+**Output:** `0981`
+
+internet
+------------------------------
+
+**Description:** Strong passphrases especially used for web services/accounts
+
+**Syntax:** `sequence:string = internet([length:int = 22], [shuffle:boolean = false])`
+
+**Output:** `brGK98]~hkhyNE79_?297`
+
+**Arguments:**
+
+ * length:int - length of the generated sequence
+ * shuffle:boolean - flag to enable character position shuffle (random positions)
+
+**Example:**
+
+```js
+const pw1 = _pwMagic.internet();
+// brGK98]~hkhyNE79_?297
+
+const pw2 = _pwMagic.internet(50, true);
+// 62p6u4dS934HssJ9*8BMa!(NN}q}384Udoc2F!)8%§5!D7psYL
+```
 
 Any Questions ? Report a Bug ? Enhancements ?
 ---------------------------------------------
