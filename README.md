@@ -17,6 +17,7 @@ Features
 * Random Pin Numbers (4 Digits)
 * Remarkable Human Passwords (nato+greek alphabet)
 * Human passwords/tokens only uses easy readable chars (`l` and `i` are avoided)
+* Alphnumerical Tokens
 
 API
 ------------------------------
@@ -26,6 +27,7 @@ API
  * [internet](#internet) - Strong passphrases especially used for web services/accounts/wifi
  * [server](#server) - Ultrastrong passphrases especially used for servers
  * [humanShort](#humanshort) - Remarkable passwords including greek+nato alphabet
+ * [token](#token) - Alphnumerical Standard Tokens
 
 numbers
 ------------------------------
@@ -117,6 +119,26 @@ humanShort
 ```js
 const pw1 = _pwMagic.humanShort();
 // foxtrot5SIERRA,four]03pm
+```
+
+token
+------------------------------
+
+**Description:** Alphnumerical Standard Tokens
+
+**Syntax:** `sequence:string = token([length:int = 20])`
+
+**Output:** `l4J4rK9v62MUGBstbgh0XyQUQ`
+
+**Arguments:**
+
+ * length:int - length of the generated sequence
+
+**Example:**
+
+```js
+const pw1 = _pwMagic.token(50);
+// Q49hIVylOKI1ixUe5FLliIsUEbASHWXjFRBEBPs6zcoog0JFnezOvS6HJWahQhca
 ```
 
 Any Questions ? Report a Bug ? Enhancements ?

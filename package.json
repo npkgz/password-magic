@@ -1,6 +1,6 @@
 {
   "name": "password-magic",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Andi Dittrich (https://andidittrich.de)",
   "license": "MIT",
   "homepage": "https://github.com/AndiDittrich/Node.password-magic",
@@ -14,7 +14,10 @@
     "user",
     "security",
     "random",
-    "numbers"
+    "numbers",
+    "async",
+    "promise",
+    "crypto"
   ],
   "files": [
     "lib",
