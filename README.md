@@ -12,12 +12,14 @@ yarn add password-magic --save
 Features
 ------------------------------
 
+* Full **asynchronous operation**
 * Generate Random User Passwords
 * Random Number Sequences of arbitrary length 
 * Random Pin Numbers (4 Digits)
 * Remarkable Human Passwords (nato+greek alphabet)
 * Human passwords/tokens only uses easy readable chars (`l` and `i` are avoided)
 * Alphnumerical Tokens
+* Node.js [crypto API](https://nodejs.org/api/crypto.html#crypto_crypto_randombytes_size_callback) is used to generate uniformly-distributed random numbers
 
 API
 ------------------------------
@@ -48,7 +50,7 @@ numbers
 const _pwMagic = require('./password-magic');
 
 for (let i=0;i<10;i++){
-    console.log('Numbers', _pwMagic.numbers());
+    console.log('Numbers', await _pwMagic.numbers());
 }
 ```
 
@@ -78,10 +80,10 @@ internet
 **Example:**
 
 ```js
-const pw1 = _pwMagic.internet();
+const pw1 = await _pwMagic.internet();
 // brGK98]~hkhyNE79_?297
 
-const pw2 = _pwMagic.internet(50, true);
+const pw2 = await _pwMagic.internet(50, true);
 // 62p6u4dS934HssJ9*8BMa!(NN}q}384Udoc2F!)8%§5!D7psYL
 ```
 
@@ -101,7 +103,7 @@ server
 **Example:**
 
 ```js
-const pw1 = _pwMagic.server(25);
+const pw1 = await _pwMagic.server(25);
 // v~8)yyk§HMKU§HBg&%#wyDS9F
 ```
 
@@ -117,7 +119,7 @@ humanShort
 **Example:**
 
 ```js
-const pw1 = _pwMagic.humanShort();
+const pw1 = await _pwMagic.humanShort();
 // foxtrot5SIERRA,four]03pm
 ```
 
@@ -137,7 +139,7 @@ token
 **Example:**
 
 ```js
-const pw1 = _pwMagic.token(50);
+const pw1 = await _pwMagic.token(50);
 // Q49hIVylOKI1ixUe5FLliIsUEbASHWXjFRBEBPs6zcoog0JFnezOvS6HJWahQhca
 ```
 

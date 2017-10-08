@@ -1,6 +1,6 @@
 {
   "name": "password-magic",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "author": "Andi Dittrich (https://andidittrich.de)",
   "license": "MIT",
   "homepage": "https://github.com/AndiDittrich/Node.password-magic",
@@ -36,6 +36,10 @@
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-aenondynamics": "^0.1.0"
+    "eslint-config-aenondynamics": "^0.1.0",
+    "mathjs": "^3.16.4"
+  },
+  "dependencies": {
+    "async-magic": "^1.3.0"
   }
 }
