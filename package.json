@@ -37,7 +37,7 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-aenondynamics": "^0.1.0",
-    "mathjs": "^3.16.4"
+    "mathjs": "^7.5.1"
   },
   "dependencies": {
     "async-magic": "^1.3.0"
